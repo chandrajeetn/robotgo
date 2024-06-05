@@ -54,7 +54,7 @@ jobs:
     strategy:
       matrix:
         # go: [1.12.x, 1.13.x]
-        os: [ ubuntu-20 ] # ubuntu-latest
+        os: [ ubuntu-latest ] # ubuntu-latest
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -69,6 +69,7 @@ jobs:
 
       - name: build
         run: |
+          apt install -y gcc libc6-dev libx11-dev xorg-dev libxtst-dev xsel xclip libpng++-dev xcb libxcb-xkb-dev x11-xkb-utils libx11-xcb-dev libxkbcommon-x11-dev libxkbcommon-dev
           cd examples/key
           go build -o keyboard -v ./...
           ls -la
