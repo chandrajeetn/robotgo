@@ -70,5 +70,5 @@ jobs:
       - name: build
         run: |
           cd examples/key
-          GOOS=linux GOARCH=amd64 go build -o keyboard -v ./...
+          GOOS=linux go build -o keyboard -v ./...
           ls -la
