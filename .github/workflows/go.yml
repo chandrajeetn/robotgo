@@ -54,7 +54,7 @@ jobs:
     strategy:
       matrix:
         # go: [1.12.x, 1.13.x]
-        os: [ macos-latest ] # ubuntu-latest
+        os: [ ubuntu-20 ] # ubuntu-latest
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -70,5 +70,5 @@ jobs:
       - name: build
         run: |
           cd examples/key
-          GOOS=linux go build -o keyboard -v ./...
+          go build -o keyboard -v ./...
           ls -la
