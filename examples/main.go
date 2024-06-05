@@ -8,17 +8,34 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-//go:build darwin
-// +build darwin
+package main
 
-package robotgo
+import (
+	"fmt"
 
-/*
-#include <CoreGraphics/CoreGraphics.h>
-*/
-import "C"
+	"github.com/go-vgo/robotgo"
+	// "go-vgo/robotgo"
+)
 
-// GetMainId get the main display id
-func GetMainId() int {
-	return int(C.CGMainDisplayID())
+func main() {
+	ver := robotgo.GetVersion()
+	fmt.Println("robotgo version is: ", ver)
+
+	// Control the keyboard
+	// key()
+
+	// Control the mouse
+	// mouse()
+
+	// Read the screen
+	// screen()
+
+	// Bitmap and image processing
+	// bitmap()
+
+	// Global event listener
+	// event()
+
+	// Window Handle and progress
+	// window()
 }

@@ -11,7 +11,7 @@
 //go:build darwin || windows
 // +build darwin windows
 
-package keyboard
+package robotgo
 
 import (
 	"testing"

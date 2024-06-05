@@ -1,2 +1,2 @@
 // +bulid linux,next
-package keyboard
+package robotgo
