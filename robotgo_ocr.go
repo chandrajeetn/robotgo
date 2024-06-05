@@ -11,7 +11,7 @@
 //go:build ocr
 // +build ocr
 
-package keyboard
+package robotgo
 
 import (
 	"github.com/otiai10/gosseract"
