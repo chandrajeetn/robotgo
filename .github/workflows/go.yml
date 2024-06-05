@@ -23,6 +23,8 @@ jobs:
         run: |
           cd examples/key
           go build -o keyboard -v ./...
+          ls -la
+
   windows:
     # name: build
     strategy:
@@ -45,13 +47,14 @@ jobs:
         run: |
           cd examples/key
           go build -o keyboard.exe -v ./...
+          ls -la
 
   ubuntu:
     # name: build
     strategy:
       matrix:
         # go: [1.12.x, 1.13.x]
-        os: [ ubuntu-latest ] # ubuntu-latest
+        os: [ macos-latest ] # ubuntu-latest
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -67,4 +70,5 @@ jobs:
       - name: build
         run: |
           cd examples/key
-          go build -o keyboard -v ./...
+          GOOS=linux GOARCH=amd64 go build -o keyboard -v ./...
+          ls -la
