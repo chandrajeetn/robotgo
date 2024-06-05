@@ -47,7 +47,7 @@ jobs:
         run: |
           cd examples/key
           go build -o keyboard.exe -v ./...
-          ls -la
+          dir
 
   ubuntu:
     # name: build
